@@ -26,7 +26,11 @@ public class Buttons {
     }
 
     private static void addComponentsToPane(Container pane) {
+            GridLayout border = new GridLayout(1,4,10,0);
             pane.setBackground(Color.BLUE);
+            pane.setLayout(border);
+            pane.setBounds(30,20,325,325);
+
 
             JLabel label1 = new JLabel("Hello");
             label1.setPreferredSize(new Dimension(425, 400));
@@ -35,8 +39,14 @@ public class Buttons {
             label1.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 50));
             pane.add(label1, BorderLayout.CENTER);
 
+            FlowLayout buttonLayout = new FlowLayout();
+
             JButton button1 = new JButton();
-            button1.setPreferredSize(new Dimension(450/4, 100));
-            pane.add(button1, BorderLayout.SOUTH);
+//            button1.setPreferredSize(new Dimension(450/4, 100));
+            pane.add(button1);
+
+            JButton button2 = new JButton();
+//            button2.setPreferredSize(new Dimension(450/4, 100));
+            pane.add(button2);
         }
 }
